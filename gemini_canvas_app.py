@@ -90,7 +90,7 @@ async def process_text(req: TextRequest):
             raise HTTPException(status_code=500, detail="No response generated")
         
         logger.info(f"Successfully processed text with action: {req.action}")
-        return {"result": response.text, "action": req.action}
+        return {"text": response.text, "action": req.action}
     
     except Exception as e:
         logger.error(f"Error processing text: {str(e)}")
@@ -110,7 +110,7 @@ async def generate_content(req: GenerateRequest):
             raise HTTPException(status_code=500, detail="No content generated")
         
         logger.info("Successfully generated new content")
-        return {"result": response.text, "prompt": req.prompt}
+        return {"text": response.text, "prompt": req.prompt}
     
     except Exception as e:
         logger.error(f"Error generating content: {str(e)}")
