@@ -161,7 +161,7 @@ async def process_text(req: TextRequest):
         elapsed = (end_time_utc - start_time_utc).total_seconds()
         time_format = "%H:%M:%S, %d-%m-%Y"
         return {
-            "result": response.text,
+            "text": response.text,
             "action": req.action,
             "style": req.style,
             "model": req.model,
