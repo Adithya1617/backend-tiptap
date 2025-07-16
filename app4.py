@@ -47,9 +47,8 @@ app.add_middleware(
         "http://127.0.0.1:3000",
         "http://localhost:5173",         # Added for Vite/React dev server
         "http://127.0.0.1:5173",          # Added for Vite/React dev server
-        "https://i20frontend.vercel.app"  # Added for deployed frontend
-        "https://i20frontend-16july.vercel.app"
-        "https://i20frontend-16july.vercel.app/#/proposal" #added for  new deployed frontend
+        "https://i20frontend.vercel.app",  # Added for deployed frontend
+        "https://i20frontend-16july.vercel.app" #added for  new deployed frontend
     ],  # Specify allowed origins
     allow_credentials=True,
     allow_methods=["GET", "POST"],
